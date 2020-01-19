@@ -12,6 +12,20 @@ function equal() {
         document.form.textview.value = Math.pow(arg1, arg2)
     }
 }
+function sqrt(){
+    var exp = document.form.textview.value;
+    if(exp){
+        equal()
+        document.form.textview.value = Math.sqrt(document.form.textview.value)
+    }
+}
+function exp(){
+    var exp = document.form.textview.value;
+    if(exp){
+        equal()
+        document.form.textview.value = Math.exp(document.form.textview.value)
+    }
+}
 function c() {
     document.form.textview.value = '';
 }
