@@ -3,8 +3,13 @@ function insert(num) {
 }
 function equal() {
     var exp = document.form.textview.value;
-    if(exp){
+    if(exp && exp.indexOf('^') == -1){
         document.form.textview.value = eval(exp)
+    }
+    else if (exp.indexOf('^') !== -1){
+        var arg1 = exp.split('^')[0]
+        var arg2 = exp.split('^')[1]
+        document.form.textview.value = Math.pow(arg1, arg2)
     }
 }
 function c() {
